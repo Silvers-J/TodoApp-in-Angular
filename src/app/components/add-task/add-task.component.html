@@ -1,1 +1,7 @@
-<p>add-task works!</p>
+<div class="container">
+	<label for="title">Title</label>
+	<input class="text" type="text" [(ngModel)]="task.title" name="" id="title" value="" placeholder="Title">
+	<label for="description">Description</label>
+	<textarea name="" id="description" [(ngModel)]="task.description" placeholder="Description"></textarea>
+	<button (click)="addTask()">ADD TASK</button>
+</div>

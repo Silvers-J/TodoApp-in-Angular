@@ -1,1 +1,7 @@
-<p>status works!</p>
+<div class="container">
+	<ng-container *ngFor="let task of tasks">
+		<app-todo-item [task]="task"></app-todo-item>
+	</ng-container>
+
+	<label> {{ metaData.name }} </label>
+</div>
