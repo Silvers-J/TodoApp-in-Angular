@@ -1,10 +1,16 @@
+.outer-container
+	width 100vw
+
 .container
 	width 30vw
+	max-width 1080px
+	margin 0 auto
+	padding-top 5em
 	display flex
 	flex-direction column
 
 button
-	align-self flex-start
+	align-self flex-end
 	font-size .7em
 	padding .5em .6em
 	border-radius 0.5em
@@ -17,6 +23,10 @@ input
 	border none
 	border-bottom 1px solid lightgrey
 	background-color #d2f8a8
+
+input:active
+	border none
+	border-bottom 1px solid lightgrey
 
 textarea
 	height 40px

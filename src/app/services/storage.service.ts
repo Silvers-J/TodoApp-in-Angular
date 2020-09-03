@@ -1,4 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+
 import { Task } from '../model/Task';
 import { Status } from '../model/Status';
 
@@ -6,7 +8,7 @@ import { Status } from '../model/Status';
   providedIn: 'root'
 })
 export class StorageService implements OnInit {
-
+	changed = new Subject<number>();
   constructor() { }
 
 	ngOnInit() {
@@ -59,8 +61,9 @@ export class StorageService implements OnInit {
 		let tasks = this.getTasks();
 		let index = tasks.findIndex(task => task.id === id);
 		tasks[index].status = newStatus;
-		console.log(tasks[index]);
 		localStorage.tasks = JSON.stringify(tasks);
+
+		this.changed.next(1);
 	}
 
 	storeTask(task: Task) {
@@ -71,7 +74,7 @@ export class StorageService implements OnInit {
 		} else {
 			localStorage.tasks = JSON.stringify([task]);
 		}
-		this.updateTasks();
+		this.changed.next(1);
 	}
 
 	deleteTask(id: number) {
@@ -81,6 +84,6 @@ export class StorageService implements OnInit {
 			tasks.splice(index, 1);
 			localStorage.tasks = JSON.stringify(tasks);
 		}
-		this.updateTasks();
+		this.changed.next(1);
 	}
 }
