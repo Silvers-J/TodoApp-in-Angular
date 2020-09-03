@@ -28,7 +28,10 @@ export class AddTaskComponent implements OnInit {
 
 	isUniqueID(id: number): boolean {
 		let tasks = this.storage.getTasks();
-		return !tasks.some(task => id === task.id);
+		if(tasks)
+			return !tasks.some(task => id === task.id);
+		else
+			return true;
 	}
 
 	getUniqueID(): number {
@@ -43,6 +46,7 @@ export class AddTaskComponent implements OnInit {
 	addTask() {
 		this.storage.storeTask(this.task);
 		console.log(this.task);
+		this.initPerson();
 	}
 
 }
