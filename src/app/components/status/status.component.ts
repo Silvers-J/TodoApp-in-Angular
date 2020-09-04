@@ -15,11 +15,9 @@ export class StatusComponent implements OnInit {
   ngOnInit(): void {
 		this.tasks = this.storageService.getFilteredTasks(this.metaData.type);
 
-		this.storageService.changed.subscribe(data => this.update());
-	}
-
-	update() {
-		this.tasks = this.storageService.getFilteredTasks(this.metaData.type);
+		// Subscribing to changed Subject to get notified on updates to storage
+		this.storageService.changed$.subscribe(data =>  
+			this.tasks = this.storageService.getFilteredTasks(this.metaData.type));
 	}
 
 	onStatusChange(event) {

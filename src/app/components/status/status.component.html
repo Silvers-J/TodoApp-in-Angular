@@ -1,7 +1,9 @@
 <div class="container">
-	<ng-container *ngFor="let task of tasks">
-		<app-todo-item [task]="task" (statusChanged)="onStatusChange($event)"></app-todo-item>
-	</ng-container>
+	<div class="inner-container">
+		<ng-container *ngFor="let task of tasks">
+			<app-todo-item [task]="task" (statusChanged)="onStatusChange($event)"></app-todo-item>
+		</ng-container>
+	</div>
 
 	<label> {{ metaData.name }} </label>
 </div>
