@@ -1,7 +1,11 @@
-<<<<<<< HEAD
+
 # TodoApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+
+## Install dependencies 
+
+Run `npm install`
 
 ## Development server
 
@@ -29,4 +33,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # TodoApp-in-Angular
 A simple todo app created in Angular
->>>>>>> 0c8dce6b21fb94cd7838557bd543a6e05710d41a
+
