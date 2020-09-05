@@ -36,7 +36,7 @@ export class AddTaskComponent implements OnInit {
 
 	getUniqueID(): number {
 		let i = 1;
-		while(true && i < 20) {
+		while(true) {
 			if(this.isUniqueID(i))
 				return i;
 			i += 1;
