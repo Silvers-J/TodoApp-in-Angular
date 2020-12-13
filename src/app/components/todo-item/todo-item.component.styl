@@ -2,18 +2,34 @@
 	background-color #eee
 	border-radius 1em
 	border 1px solid orange
-	padding 0.5em
+	padding 1em
 	margin-bottom 1em
+	display grid
+	grid-template-columns 0.7fr 0.3fr
+	grid-template-rows 1fr 1fr
 	
 	.card-title
+		grid-column 1 / 2
+		grid-row 1 / 2
 		font-weight bold
+		padding-bottom 1.3em
 
-	.description
-		padding 0.5em
+	.card-body
+		grid-column 1 / 2
+		grid-row 2 / 3
+		padding-bottom 0.5em
 
-button
-	background-color #eef
-	margin-left 1em
-	font-size 0.7em
-	padding 0.2em 0.4em
-	cursor pointer
+	.buttons
+		grid-column 2 / 3
+		grid-row 1 / span 2
+		display grid
+		grid-template-columns 1fr
+		font-size 1.1em
+		button
+			color green
+			font-weight 600
+			text-transform uppercase
+			background-color #eef
+			font-size 0.7em
+			padding 0.2em 0.4em
+			cursor pointer

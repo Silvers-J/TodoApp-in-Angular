@@ -45,8 +45,6 @@ export class AddTaskComponent implements OnInit {
 
 	addTask() {
 		this.storage.storeTask(this.task);
-		console.log(this.task);
 		this.initPerson();
 	}
-
 }

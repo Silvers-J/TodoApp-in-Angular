@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AddTaskComponent } from './components/add-task/add-task.component';
 import { Status } from './model/Status';
 
 @Component({
@@ -19,5 +18,9 @@ export class AppComponent {
 	skipped = {
 		name: 'Skipped',
 		type: Status.skipped
+	}
+	inProgress = {
+		name: 'In Progress',
+		type: Status.inProgress
 	}
 }

@@ -1,14 +1,12 @@
 <div class="card">
 	<div class="card-title"> {{ task.title }} </div>
 	<div class="card-body">
-		<div class="description">
-			{{ task.description }} 
-		</div>
-		<div *ngIf="status" class="btn">
-			<ng-container *ngFor="let stat of status">
-				<button (click)="changeStatus($event)" > {{ stat }} </button>
-			</ng-container>
-		</div>
+		{{ task.description }} 
+	</div>
+	<div *ngIf="status" class="buttons">
+		<ng-container *ngFor="let stat of status">
+			<button (click)="changeStatus($event)" > {{ stat }} </button>
+		</ng-container>
 	</div>
 </div>
 
