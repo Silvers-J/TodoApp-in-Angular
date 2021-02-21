@@ -3,21 +3,27 @@
 	height 65vh
 	display flex
 	flex-direction column
-	border 1px dashed blue
+	border 1px solid white
 	padding 0.5em
+	background-color var(--bg-secondary)
 
 .inner-container
-	height 90%
+	height 94%
 	overflow auto
+	scrollbar-width thin
 
 label
 	position sticky
 	bottom 5px
 	width 100%
-	background-color orange
+	background-color #181818
 	margin auto 0 0 0
 	padding 0.4em
-	color white
+	color var(--font-color)
 	font-weight bold
 	text-align center
 
+.item
+	margin 0.2em
+	:hover
+		border 1px dashed white
